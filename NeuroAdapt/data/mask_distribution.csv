@@ -1,0 +1,4 @@
+channel,positive_pixels,positive_pct
+WT (verify),0,0.0
+TC (verify),1111,1.929
+ET (verify),0,0.0
