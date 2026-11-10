@@ -108,11 +108,12 @@ flowchart TD
 ### Proposed adaptive fusion
 
 For each modality \(m\), an encoder extracts a feature map \(F_m(x,y)\). The fusion block predicts spatial weights \(\alpha_m(x,y)\), explicitly masking unavailable modalities before the softmax:
-
+$$
 \[
 F_{\mathrm{fused}}(x,y) = \sum_{m \in \mathcal{A}} \alpha_m(x,y) F_m(x,y),
 \qquad \sum_{m \in \mathcal{A}} \alpha_m(x,y)=1,
 \]
+$$
 
 where \(\mathcal{A}\) is the set of available MRI modalities. Modality dropout will be applied **only during training** of the robust models, not the conventional baseline.
 
